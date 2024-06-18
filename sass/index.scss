@@ -4,6 +4,10 @@ $font-Open_sans: "Open Sans", sans-serif;
 
 $purple: #5231FF;
 
+@mixin btn_hover{
+    background-color: #8179ee;
+}
+
 body{
     
     h1, h2, h3, h4, h5{
@@ -14,6 +18,7 @@ body{
 
     width: 100%;
     max-width: 1440px;
+    margin: auto;
 
     a{
         text-decoration: none;
@@ -78,12 +83,12 @@ body{
 }
 
 .header__facebookIcon-link{
-margin-top: 31px;
-margin-left: 18px;
+    margin-top: 31px;
+    margin-left: 18px;
 
-svg:hover{
-    border: transparent 1px solid;
-}
+    svg:hover{
+        border: transparent 1px solid;
+    }
 }
 
 .mainPortfolio__title{
@@ -167,7 +172,7 @@ svg:hover{
         }
 
         a:hover{
-           background-color: #8179ee;
+            @include btn_hover;
         }
     }
 
@@ -182,7 +187,182 @@ svg:hover{
     }  
 }
 
+.facts__title{
+    text-align: center;
+    padding-top: 150px;
 
+    .facts__title-big{
+        width: 550px;
+        margin: 12px auto;
+        line-height: 54px;
+    }
+}
+
+.facts__cards{
+    display: flex;
+    padding-top: 54px;
+    justify-content: center;
+    gap: 200px;
+
+    .facts__cards-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        svg{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.facts__line{
+    svg{
+        margin-top: 87px;
+        margin-left: 85px;
+    }
+}
+
+.explore{
+    display: flex;
+    gap: 128px;
+
+    .explore__title{
+        padding-top: 80px;
+        padding-left: 121px;
+
+        h3{
+            margin-top: 20px;
+            font-size: 25px;
+        }
+
+        .explore__text{
+            display: block;
+            margin-top: 27px;
+            font-family: $font-Open_sans;
+            width: 382px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        .explore-link{
+            width: 151px;
+            height: 50px;
+            margin-top: 42px;
+            border-radius: 25px;
+            background-color: $purple;
+            color: #fff;
+            text-align: center;
+            align-content: center;
+            font-size: 12px;
+        }
+
+        .explore-link:hover{
+            @include btn_hover;
+        }
+    }
+
+    .explore__tags{
+        display: grid;
+        grid-template-columns: repeat(3, 219px);
+        grid-template-rows: repeat(4, 55px);
+        text-align: center;
+        gap: 3px;
+        padding-top: 74px;
+        padding-bottom: 123px;
+        
+
+        .explore__tags-link{
+            border: 1px lightgrey solid;
+            border-radius: 8px;
+            font-size: 14px;
+            align-content: center;
+        }
+
+        .explore__tags-link:hover{
+            border: 1px rgb(92, 92, 92) solid;
+        }
+    }
+}
+
+.subscribe{
+    width: 1200px;
+    height: 383px;
+    border-radius: 25px;
+    background-image: url(../img/subscr_back.png);
+    margin: auto;
+    padding-top: 102px;
+    text-align: center;
+
+    span{
+        display: block;
+    }
+
+
+    .subscribe__title-small{
+        color: lightgray;
+    }
+
+    .subscribe__title-big{
+        margin-top: 15px;
+        color: #fff;
+    }
+
+    .subscribe__text{
+        display: block;
+        color: #fff;
+        width: 500px;
+        margin: 30px auto 110px;
+        line-height: 23px;
+    }
+
+    .subscribe__form{
+        position: relative;
+
+        
+        input{
+            width: 432px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            margin-left: -69px;
+            outline: none;
+            padding-left: 20px;
+        }
+
+        input::placeholder{
+            padding-left: 25px;
+            color: lightgray;
+            font-size: 15px;
+        }
+
+        input:focus::placeholder{
+            visibility: hidden;
+        }
+
+        .subscribe__form-btn{
+            width: 140px;
+            height: 52px;
+            position: absolute;
+            top: 0px;
+            left: 719px;
+            color: #fff;
+            border-radius: 25px;
+            background-color: #5231FF;
+            border: none;
+            font-size: 13px;
+        }
+
+        .subscribe__form-btn:hover{
+            @include btn_hover();
+        }
+
+        .subscribe__form-text{
+            color: lightgray;
+            padding-top: 15px;
+            font-size: 13px;
+        }
+    }
+}
 
 
 
