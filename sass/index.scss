@@ -8,6 +8,25 @@ $purple: #5231FF;
     background-color: #8179ee;
 }
 
+%btn_link{
+    background-color: $purple;
+    border-radius: 5px;
+    border: none;
+    font-size: 9px;
+    width: 120px;
+    height: 28px;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+%text{
+    font-family: $font-Open_sans;
+    font-size: 15px;
+    line-height: 20px;
+    color: #7C8499;
+}
+
 body{
     
     h1, h2, h3, h4, h5{
@@ -28,7 +47,7 @@ body{
 
     a:visited{
         text-decoration: none;
-        color: black;
+        color: rgb(0, 0, 0);
     }
 
     ul{
@@ -158,18 +177,12 @@ body{
     
     .mainPortfolio__cards-item{
         text-align: center;
-        
+        color: #fff;
+
         a{
-            background-color: $purple;
-            border-radius: 5px;
-            border: none;
-            font-size: 9px;
-            width: 120px;
-            height: 28px;
-            justify-content: center;
-            color: #fff;
-            cursor: pointer;
+            @extend %btn_link;
         }
+        
 
         a:hover{
             @include btn_hover;
@@ -236,12 +249,10 @@ body{
         }
 
         .explore__text{
+            @extend %text;
             display: block;
             margin-top: 27px;
-            font-family: $font-Open_sans;
             width: 382px;
-            font-size: 15px;
-            line-height: 20px;
         }
 
         .explore-link{
@@ -270,7 +281,6 @@ body{
         padding-top: 74px;
         padding-bottom: 123px;
         
-
         .explore__tags-link{
             border: 1px lightgrey solid;
             border-radius: 8px;
@@ -297,7 +307,6 @@ body{
         display: block;
     }
 
-
     .subscribe__title-small{
         color: lightgray;
     }
@@ -318,7 +327,6 @@ body{
     .subscribe__form{
         position: relative;
 
-        
         input{
             width: 432px;
             height: 50px;
@@ -365,5 +373,101 @@ body{
 }
 
 
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 94px;
+    padding-left: 120px;
+}
+
+.footer__navigation{
+    display: flex;
+    gap: 288px;
+    margin-bottom: 31px;
+
+    .footer__title{
+        width: 283px;
+
+        h4{
+            margin-bottom: 33px;
+        }
+    
+        .footer__title-text{
+            @extend %text;
+            line-height: 24px;
+            font-size: 14px;
+            margin-bottom: 22px
+        }
+
+        svg:hover{
+            border: transparent 1px solid;
+        }
+    }
 
 
+    .footer_menu{
+
+        display: flex;
+        gap:144px;
+
+        a{
+            color: inherit;
+            font-size: inherit;
+        }
+
+        a:hover{
+            color: $purple;
+        }
+
+        .footer_menu-item{
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+                margin-top: 0px;
+                
+                li{
+                @extend %text;
+                font-size: 13px;
+                }
+            }
+
+            ul>li:first-of-type{
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+        }
+
+        .footer_menu-item-btn{
+            @extend %btn_link;
+            text-align: center;
+            align-content: center;
+            width: 116px;
+            height: 21px;
+        }
+
+        .footer_menu-item-btn:hover{
+            @include btn_hover;
+        }
+    
+        .footer_menu-item-btn:visited{
+            color: #fff;
+        }
+    }
+}
+
+.footer__PS-text{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .footer__PS-item{
+    font-size: 13px;
+
+        span:first-of-type{
+            @extend %text;
+            font-size: inherit;
+        }
+    }
+}

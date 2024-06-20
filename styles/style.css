@@ -1,3 +1,22 @@
+.footer__navigation .footer_menu .footer_menu-item-btn, .mainPortfolio__cards .mainPortfolio__cards-item a {
+  background-color: #5231FF;
+  border-radius: 5px;
+  border: none;
+  font-size: 9px;
+  width: 120px;
+  height: 28px;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer__PS-text .footer__PS-item span:first-of-type, .footer__navigation .footer_menu .footer_menu-item ul li, .footer__navigation .footer__title .footer__title-text, .explore .explore__title .explore__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: #7C8499;
+}
+
 body {
   width: 100%;
   max-width: 1440px;
@@ -15,7 +34,7 @@ body a {
 }
 body a:visited {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 body ul {
   list-style: none;
@@ -135,17 +154,7 @@ body ul {
 }
 .mainPortfolio__cards .mainPortfolio__cards-item {
   text-align: center;
-}
-.mainPortfolio__cards .mainPortfolio__cards-item a {
-  background-color: #5231FF;
-  border-radius: 5px;
-  border: none;
-  font-size: 9px;
-  width: 120px;
-  height: 28px;
-  justify-content: center;
   color: #fff;
-  cursor: pointer;
 }
 .mainPortfolio__cards .mainPortfolio__cards-item a:hover {
   background-color: #8179ee;
@@ -204,10 +213,7 @@ body ul {
 .explore .explore__title .explore__text {
   display: block;
   margin-top: 27px;
-  font-family: "Open Sans", sans-serif;
   width: 382px;
-  font-size: 15px;
-  line-height: 20px;
 }
 .explore .explore__title .explore-link {
   width: 151px;
@@ -307,6 +313,82 @@ body ul {
   color: lightgray;
   padding-top: 15px;
   font-size: 13px;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 94px;
+  padding-left: 120px;
+}
+
+.footer__navigation {
+  display: flex;
+  gap: 288px;
+  margin-bottom: 31px;
+}
+.footer__navigation .footer__title {
+  width: 283px;
+}
+.footer__navigation .footer__title h4 {
+  margin-bottom: 33px;
+}
+.footer__navigation .footer__title .footer__title-text {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+.footer__navigation .footer__title svg:hover {
+  border: transparent 1px solid;
+}
+.footer__navigation .footer_menu {
+  display: flex;
+  gap: 144px;
+}
+.footer__navigation .footer_menu a {
+  color: inherit;
+  font-size: inherit;
+}
+.footer__navigation .footer_menu a:hover {
+  color: #5231FF;
+}
+.footer__navigation .footer_menu .footer_menu-item ul {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 0px;
+}
+.footer__navigation .footer_menu .footer_menu-item ul li {
+  font-size: 13px;
+}
+.footer__navigation .footer_menu .footer_menu-item ul > li:first-of-type {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.footer__navigation .footer_menu .footer_menu-item-btn {
+  text-align: center;
+  align-content: center;
+  width: 116px;
+  height: 21px;
+}
+.footer__navigation .footer_menu .footer_menu-item-btn:hover {
+  background-color: #8179ee;
+}
+.footer__navigation .footer_menu .footer_menu-item-btn:visited {
+  color: #fff;
+}
+
+.footer__PS-text {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer__PS-text .footer__PS-item {
+  font-size: 13px;
+}
+.footer__PS-text .footer__PS-item span:first-of-type {
+  font-size: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */
